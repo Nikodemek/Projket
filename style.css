@@ -1,0 +1,230 @@
+:root {
+    --darkGreen: rgb(0, 130, 0);
+    --darkblue: rgb(22, 47, 125);
+    --lightGreen: #7fff50;
+    --lightBrown: #CC5F2B;
+    --lightGreenBlur: rgba(127, 255, 80, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    font-family: 'Oswald', sans-serif;
+    background-image: linear-gradient(-45deg, var(--darkGreen), var(--lightGreen), white);
+}
+
+.flex {
+    display: flex;
+}
+
+.none {
+    display: none;
+}
+
+header {
+    height: 7vh;
+    background-color: var(--darkGreen);
+    position: sticky;
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 0 1px white;
+}
+
+header h1 {
+    height: 7vh;
+    width: 150px;
+    line-height: 7vh;
+    margin-left: 75px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    /* color: blanchedalmond; */
+    color: white;
+}
+
+header a {
+    display: block;
+    height: 2.5vh;
+    width: 150px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-width: 0px;
+    background-color: var(--darkblue);
+    border-radius: 20px;
+    box-shadow: 0 0 0 10px var(--darkblue);
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 2.5vh;
+    font-size: 1.2rem;
+    border-collapse: collapse;
+    cursor: pointer;
+    text-decoration: none;
+    color: blanchedalmond;
+    text-align: center;
+}
+
+main {
+    overflow: auto;
+}
+
+main section {
+    margin-top: 5vh;
+    height: 25vh;
+    width: 85vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    color: rgba(0, 0, 139, 0.8);
+}
+
+main section:nth-child(1) {
+    margin-top: 15vh;
+}
+
+main section:nth-child(3) {
+    margin: 5vh auto;
+}
+
+main section div {
+    height: 25vh;
+    width: 25vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+main section h1 {
+    line-height: 25vh;
+    text-align: center;
+    font-size: 3rem;
+}
+
+main section:nth-child(1) div {
+    background-image: url(obrazki/img3.png);
+}
+
+main section:nth-child(2) div {
+    background-image: url(obrazki/img2.jpg);
+}
+
+main section:nth-child(3) div {
+    background-image: url(obrazki/zdane.jpg);
+}
+
+footer {
+    height: 2.5vh;
+    line-height: 2.5vh;
+    text-align: right;
+    padding: 0 20px;
+    background-color: var(--darkGreen);
+}
+
+.main_user {
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+    width: 80vw;
+    margin: auto;
+}
+
+.main_user a {
+    display: block;
+    width: 20vw;
+    height: 5vh;
+    border-width: 0px;
+    background-color: var(--darkblue);
+    border-radius: 20px;
+    box-shadow: 0 0 0 10px var(--darkblue);
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 5vh;
+    font-size: 1.2rem;
+    border-collapse: collapse;
+    cursor: pointer;
+    text-decoration: none;
+    color: blanchedalmond;
+    text-align: center;
+    margin: 2.5vh auto;
+}
+
+.wrapper.logowanie,
+.wrapper.ustawienia {
+    height: 100vh;
+    overflow: auto;
+}
+
+#log,
+#settings {
+    min-height: 70vh;
+    width: 30vw;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 10vh auto;
+    border-radius: 20px;
+}
+
+#log p,
+#settings p {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#log input[type="password"],
+#log input[type="text"] {
+    display: block;
+    width: 15vw;
+    margin: 20px auto;
+}
+
+#log section {
+    display: flex;
+    justify-content: space-around;
+}
+
+#log section a,
+#log section input[type="submit"],
+#settings button,
+.mini_wrap input[type="submit"],
+#settings a {
+    border-width: 0px;
+    width: 200px;
+    height: 30px;
+    background-color: var(--darkblue);
+    border-radius: 20px;
+    box-shadow: 0 0 0 5px var(--darkblue);
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: blanchedalmond;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+#settings a {
+    display: block;
+}
+
+#settings button,
+.mini_wrap input[type="submit"],
+#settings a {
+    margin: 20px 50%;
+    transform: translateX(-50%);
+}
+
+.mini_wrap {
+    flex-direction: column;
+    transition: 0.5s;
+}
+
+.mini_wrap input[type="text"] {
+    width: 15vw;
+    margin: 20px auto;
+}

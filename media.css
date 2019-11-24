@@ -1,0 +1,135 @@
+:root {
+    --darkGreen: rgb(0, 130, 0);
+    --darkblue: rgb(22, 47, 125);
+    --lightGreen: #7fff50;
+    --lightBrown: #CC5F2B;
+    --lightGreenBlur: rgba(127, 255, 80, 0.5);
+}
+
+@media screen and (max-width: 1100px) {
+    header h1 {
+        margin-left: 5px;
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    header a {
+        box-shadow: 0 0 0 5px var(--darkblue);
+        width: 100px;
+        transform: translate(-15%, -50%);
+        font-size: 1rem;
+    }
+
+    main section {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        height: 30vh;
+    }
+
+    .main_user {
+        flex-direction: column;
+        justify-content: center;
+        margin: 40px auto;
+    }
+
+    .main_user a {
+        width: 60vw;
+        height: 5vh;
+        box-shadow: 0 0 0 5px var(--darkblue);
+        line-height: 5vh;
+        font-size: 1.2rem;
+        margin: 2.5vh auto;
+    }
+
+
+    main section:nth-child(1) {
+        margin-top: 20px;
+    }
+
+    main section h1 {
+        line-height: 0px;
+        font-size: 1.2rem;
+        height: 5vh;
+        order: 1;
+    }
+
+    main section div {
+        height: 20vh;
+        width: 85vw;
+        order: 2;
+    }
+
+    footer {
+        height: 5vh;
+        line-height: 5vh;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+    header {
+        height: 10vh;
+    }
+
+    main section {
+        height: 50vh;
+    }
+
+    main section div {
+        height: 40vh;
+    }
+
+    footer {
+        height: 6vh;
+        line-height: 6vh;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 700px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .main_user a {
+        font-size: 2rem;
+    }
+
+    main section h1 {
+        font-size: 2rem;
+    }
+
+    footer {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+
+    #log,
+    #settings {
+        width: 90vw;
+        overflow-x: hidden;
+    }
+
+    #settings p {
+        font-size: 2rem;
+    }
+
+    #log input[type="password"],
+    #log input[type="text"],
+    #settings input[type="text"] {
+        width: 60vw;
+        margin: 20px auto;
+    }
+
+    #log section {
+        flex-direction: column;
+    }
+
+    #log section a,
+    #log section input[type="submit"] {
+        margin: 20px auto;
+    }
+}
