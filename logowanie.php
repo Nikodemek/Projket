@@ -18,7 +18,7 @@
             <p>Hasło</p>
             <input type="password" name="haslo">
             <section>
-                <input type="submit" name="submit">
+                <input type="submit" name="submit" value="Logowanie">
                 <a href="index.php">Powrót</a>
             </section>
         </form>

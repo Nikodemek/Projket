@@ -7,13 +7,14 @@
 }
 
 @media screen and (max-width: 1100px) {
-    header h1 {
+    header #main_page {
+        display: block;
         margin-left: 5px;
         font-size: 1.5rem;
         text-align: left;
     }
 
-    header a {
+    header #log_outt {
         box-shadow: 0 0 0 5px var(--darkblue);
         width: 100px;
         transform: translate(-15%, -50%);
@@ -66,6 +67,37 @@
         text-align: center;
         font-size: 0.8rem;
     }
+
+    .zestawy .zestawik {
+        margin: 5vh auto;
+    }
+
+    .zestawy .nauka .fiszka {
+        left: 15%;
+        right: 15%;
+        font-size: 3rem;
+    }
+
+    .zestawy div .zuzyt {
+        font-size: 2rem;
+    }
+
+    #zzestawy,
+    #zewik,
+    #edycja_zestaw {
+        width: 90vw;
+        font-size: 1.5rem;
+        overflow-x: hidden;
+    }
+
+    #zzestawy div form input[type="text"],
+    #zzestawy div form input[type="password"],
+    #zewik div form input[type="text"],
+    #zewik div form input[type="password"],
+    #edycja_zestaw div form input[type="text"],
+    .wielki {
+        width: 50vw;
+    }
 }
 
 @media (orientation: landscape) and (max-width: 1000px) {
@@ -85,10 +117,14 @@
         height: 6vh;
         line-height: 6vh;
     }
+
+    .zestawy .nauka {
+        min-height: 80vh;
+    }
 }
 
 @media (orientation: portrait) and (min-width: 700px) {
-    header h1 {
+    header #main_page {
         font-size: 2.5rem;
     }
 

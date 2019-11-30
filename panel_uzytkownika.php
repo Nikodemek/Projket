@@ -3,7 +3,7 @@
 ?>
 <div class="main_user">
     <a href="ustawienia.php">Ustawienia konta</a>
-    <a href="#">Twoje zestawy</a>
+    <a href="zestawy.php">Twoje zestawy</a>
 </div>
 <main>
     <section>
