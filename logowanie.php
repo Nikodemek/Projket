@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -22,6 +26,24 @@
                 <a href="index.php">Powrót</a>
             </section>
         </form>
+        <?php
+            if(isset($_POST["submit"]) && !empty($_POST["login"]) && !empty("haslo")){
+                $login = $_POST["login"];
+                $password = $_POST["haslo"];
+                $sql = "SELECT * FROM `uzytkownik` WHERE login = '$login'";
+                $connect = mysqli_connect("localhost", "root", "", "pai");
+                mysqli_set_charset($connect, "utf8");
+                $checkLog = mysqli_query($connect, $sql);
+                $row = mysqli_fetch_assoc($checkLog);
+                if(password_verify($password, $row['haslo'])){
+                    header('Location: panel_uzytkownika.php');
+                }else{
+                    echo "Nie dziala","<br>";
+                    echo $row['haslo'],"<br>";
+                    echo $password;
+                }
+            }
+        ?>
     </div>
 </body>
 </html>
