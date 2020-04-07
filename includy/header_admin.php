@@ -1,3 +1,12 @@
+<?php
+    if(isset($_SESSION)){
+    }else{
+        session_start();
+    }
+    if($_SESSION['id'] != "admin"){
+         header('Location: index.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="pl">
 

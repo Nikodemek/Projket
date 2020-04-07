@@ -31,12 +31,25 @@
                 $login = $_POST["login"];
                 $password = $_POST["haslo"];
                 $sql = "SELECT * FROM `uzytkownik` WHERE login = '$login'";
+                $sql1 = "SELECT `id_rdz_uzytkownik` FROM `uzytkownik` WHERE login = '$login'";
                 $connect = mysqli_connect("localhost", "root", "", "pai");
                 mysqli_set_charset($connect, "utf8");
+                $id = mysqli_query($connect, $sql1);
+                $siema = mysqli_fetch_assoc($id);
+                $id1 = $siema['id_rdz_uzytkownik'];
                 $checkLog = mysqli_query($connect, $sql);
                 $row = mysqli_fetch_assoc($checkLog);
                 if(password_verify($password, $row['haslo'])){
-                    header('Location: panel_uzytkownika.php');
+                    if($id1 == 1){
+                        header('Location: panel_uzytkownika.php');
+                        $_SESSION['id'] = "user";
+
+                    }else if($id1 == 2){
+                        header('Location: panel_administratora.php');
+                        $_SESSION['id'] = "admin";
+                    }else{
+                        echo "Cos nie pyklo";
+                    }
                 }else{
                     echo "Nie dziala","<br>";
                     echo $row['haslo'],"<br>";

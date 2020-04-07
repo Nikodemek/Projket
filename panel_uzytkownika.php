@@ -1,8 +1,7 @@
 <?php
-    require_once('includy/header_log.php')
+    require_once('includy/header_log.php');
 ?>
 <div class="main_user">
-    <a href="ustawienia.php">Ustawienia konta</a>
     <a href="zestawy.php">Twoje zestawy</a>
 </div>
 <main>
